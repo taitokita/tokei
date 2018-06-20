@@ -5,7 +5,9 @@
         <div class="cover-inner">
             <div class="cover-contents">
                 <h1>The Clock tells you the wonderful time...</h1>
-                <a href="" class="btn btn-success btn-lg">Bijo Clockを始める</a>
+                @if (!Auth::check())
+                <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">Bijo Clockを始める</a>
+                @endif
             </div>
         </div>
     </div>
