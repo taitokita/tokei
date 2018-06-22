@@ -5,8 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Monolist</title>
-
+        <title>Bijo Clock</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Quicksand rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayad" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script"      rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Caveat"              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple"      rel="stylesheet">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -10,4 +10,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    
+     public function counts($user) {
+        $count_bijos = $user->bijos()->count();
+
+        return [
+            'count_bijos' => $count_bijos,
+        ];
+    }
 }

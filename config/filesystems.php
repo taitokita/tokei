@@ -11,9 +11,10 @@ return [
     | by the framework. The "local" disk, as well as a variety of cloud
     | based disks are available to your application. Just store away!
     |
+    'default' => env('FILESYSTEM_DRIVER', 'local'),
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => 'local',
 
     /*
     |--------------------------------------------------------------------------
@@ -39,13 +40,14 @@ return [
     |
     | Supported Drivers: "local", "ftp", "s3", "rackspace"
     |
+            'root' => storage_path('app'),
     */
 
     'disks' => [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => public_path('item'),
         ],
 
         'public' => [

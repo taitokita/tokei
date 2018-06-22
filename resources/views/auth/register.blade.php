@@ -31,10 +31,9 @@
                         {!! Form::submit('登録する', ['class' => 'btn btn-success']) !!}
                     </div>
                 {!! Form::close() !!}
-                <a href="{{ route('login') }}">ログイン</a>
             </div>
-            
         </div>
+            <p>会員の方は<a href="{{ route('login') }}" >こちら</a>へ</p>
     </div>
 </div>
 @endsection
