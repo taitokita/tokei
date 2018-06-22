@@ -13,13 +13,13 @@
             <ul>
                 
                 <li>
-                    <div class="status-label">POST</div>
+                    <div class="status-label">LIKE</div>
                     <div id="post_count" class="status-value">
-                        xxx
+                        ...
                     </div>
                 </li>
                 <li>
-                    <div class="status-label">LIKE</div>
+                    <div class="status-label">POST</div>
                     <div id="like_count" class="status-value">
                         {{ $count_like }}
                     </div>

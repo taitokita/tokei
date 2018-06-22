@@ -8,7 +8,7 @@
                             <img src="{{asset('item/'.$bijo->path)}}">
                         </div>
                         <div class="panel-body">
-                            <h3 id="name" class="bijo-title">{!! link_to_route('bijos.show', $bijo->status, ['status' => $bijo->id]) !!}</h3>
+                            <h3 id="name1" class="bijo-title">{!! link_to_route('bijos.show', $bijo->status, ['status' => $bijo->id]) !!}</h3>
                             <div id="botton" class="buttons text-center">
                                 @if (Auth::check())
                                     @include('bijos.like_button', ['bijo' => $bijo])

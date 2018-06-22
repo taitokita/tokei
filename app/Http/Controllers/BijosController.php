@@ -111,14 +111,15 @@ class BijosController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
+    {   
+        $bijo = \App\Bijo::find($id);
         $this->validate($request, [
             'master' => 'required|max:10', 
             'status' => 'required|max:10', 
             'content' => 'required|max:191',
         ]);
         
-        if (\Auth::user()->id === $micropost->user_id)
+        if (\Auth::user()->id === $bijo->user_id)
 
         $bijo = Bijo::find($id);
         $bijo->master = $request->master;

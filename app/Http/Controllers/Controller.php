@@ -13,9 +13,12 @@ class Controller extends BaseController
     
      public function counts($user) {
         $count_bijos = $user->bijos()->count();
+        
+        $count_favoriteings = $user->favoriteings()->count();
 
         return [
             'count_bijos' => $count_bijos,
+            'count_favoriteings' => $count_favoriteings,
         ];
     }
 }

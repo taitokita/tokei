@@ -9,20 +9,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+    
     protected $hidden = [
         'password', 'remember_token',
     ];
@@ -81,5 +72,48 @@ class User extends Authenticatable
             $bijo_id_exists = $this->like_bijos()->where('id', $bijoIdOrId)->exists();
             return $bijo_id_exists;
         }
+        }
+        
+        public function favoriteings()
+        {
+            return $this->belongsToMany(User::class, 'user_favorite', 'user_id', 'favorite_id')->withTimestamps();
+        }
+        public function favorite($bijoId)
+    {
+        // confirm if already favoriteing
+        $exist = $this->is_favoriteing($bijoId);
+        // confirming that it is not you
+        //$its_me = $this->id == $userId;
+    
+        if ($exist) {
+            // do nothing if already favoriteing
+            return false;
+        } else {
+            // favorite if not favoriteing
+            $this->favoriteings()->attach($bijoId);
+            return true;
+        }
+        }
+    public function unfavorite($bijoId)
+    {
+        // confirming if already favoriteing
+        $exist = $this->is_favoriteing($bijoId);
+        // confirming that it is not you
+        //$its_me = $this->id == $userId;
+    
+    
+        if ($exist) {
+            // stop favoriteing if favoriteing
+            $this->favoriteings()->detach($bijoId);
+            return true;
+        } else {
+            // do nothing if not favoriteing
+            return false;
+        }
+    }
+    
+    
+    public function is_favoriteing($bijoId) {
+        return $this->favoriteings()->where('favorite_id', $bijoId)->exists();
     }
 }

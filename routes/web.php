@@ -42,3 +42,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::delete('like', 'BijoUserController@dont_like')->name('bijo_user.dont_like');
     Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+    Route::group(['prefix' => 'users/{id}'], function () {
+        Route::post('favorite', 'UserFavoriteController@store')->name('user.favorite');
+        Route::delete('unfavorite', 'UserFavoriteController@destroy')->name('user.unfavorite');
+        Route::get('favoriteings', 'UsersController@favoriteings')->name('users.favoriteings');
+    });
+
+    Route::resource('bijos', 'BijosController', ['only' => ['store', 'destroy']]);
+});

@@ -1,3 +1,3 @@
 <footer>
-    <div class="text-center text-muted">© 2018 Bijo Clock.</div>
+    <div class="text-center text-muted">© 2018 TK Kingdom.</div>
 </footer>

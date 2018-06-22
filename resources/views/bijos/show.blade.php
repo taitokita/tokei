@@ -99,7 +99,7 @@
         </div>
     </div>
     
-<body class=showbody>
+<body>
     <div id="main1">
         <h4>{{ $bijo->status }}です！</h4>
         <h4><?php print greeting($now_hour); ?>{{ $bijo->master }}さん!</h4>
@@ -109,7 +109,7 @@
     </div>
     
 
-    <p><img src="{{asset('item/'.$bijo->path) }}"></p>
+    <p id=imageshow><img src="{{asset('item/'.$bijo->path) }}"></p>
     
     <table id="main2" class="table table-bordered col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
         <tr>

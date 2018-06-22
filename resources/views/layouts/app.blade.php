@@ -7,7 +7,8 @@
 
         <title>Bijo Clock</title>
         
-        <link href="https://fonts.googleapis.com/css?family=Quicksand rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower"        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand"           rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayad" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script"      rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Caveat"              rel="stylesheet">
